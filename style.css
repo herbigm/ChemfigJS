@@ -1,0 +1,10 @@
+svg .textNode {
+  stroke:white; 
+  stroke-width:0.5em; 
+  paint-order:stroke;
+  font-size: 12pt;
+}
+
+svg .charge {
+  font-size: x-small;
+}
