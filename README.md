@@ -100,3 +100,7 @@ To draw anellated rings, draw a ring and the second ring as subbrach. This will 
 
 ### Connecting distant atoms
 For connecting distant atoms, just write a question mark at the positions which should be connected. The first occurence of a question mark will set an anchor to the position and all following positions of question marks will be connected to the first one. 
+
+
+## License
+This project is published to the terms of the [CC-BY Attribution 4.0 International Deed](https://creativecommons.org/licenses/by/4.0/).
