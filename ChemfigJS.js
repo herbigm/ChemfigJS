@@ -1,4 +1,4 @@
-function INIT() {
+function INITchemfig() {
     const spans = document.querySelectorAll(".chemfig");
     for (const span of spans) {
         let tree = getBranch(span.innerText);
