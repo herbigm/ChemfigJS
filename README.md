@@ -6,6 +6,31 @@ version:  0.9
 script: ChemfigJS.js
 link: style.css
 
+@reaction
+<script run-once modify="false">
+function chemfig() {
+  if (!window.getBranch) {
+    setTimeout(chemfig, 100)
+    return
+  }
+    let tree = getBranch('@0');
+    let rootNode = tree[0];
+    if (tree[1].length > 0) {
+        alert("could not parse string correctly: \""+span.innerText+"\"");
+        return;
+    }
+    generateNodesInBranch(rootNode);
+    const nodes = sumUpNodes(rootNode)
+    let span = document.createElement("span");
+    span.innerHTML = "";
+    draw(span, nodes[0], nodes[1]);
+    send.lia("HTML: <div>" + span.innerHTML + "</div>")
+}
+chemmacros()
+"LIA: wait"
+</script>
+@end
+
 -->
 
 # ChemfigJS

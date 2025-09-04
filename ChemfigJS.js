@@ -408,3 +408,5 @@ function draw(parent, textNodes, bonds) {
     svg.setAttribute("height", (maxY-minY));
     parent.appendChild(svg);
 }
+
+window.getBranch = getBranch;
