@@ -1,3 +1,13 @@
+<!--
+author:   Marcus Herbig
+email:    marcus.erbig@chemie.tu-freiberg.de
+version:  0.9
+
+script: ChemfigJS.js
+link: style.css
+
+-->
+
 # ChemfigJS
 
 Programs with a GUI (graphical user interface) are often used to create chemical structural formulas on a PC. An alternative to this is the LaTeX package chemfig, which uses the typical LaTeX formats as output and can be converted into image files. For web applications, there is currently only the option of integrating comprehensive Javascript libraries or inserting images of the structural formulas. 
