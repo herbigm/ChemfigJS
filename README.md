@@ -6,7 +6,7 @@ version:  0.9
 script: ChemfigJS.js
 link: style.css
 
-@reaction
+@chemfig
 <script run-once modify="false">
 function chemfig() {
   if (!window.getBranch) {
@@ -26,7 +26,7 @@ function chemfig() {
     draw(span, nodes[0], nodes[1]);
     send.lia("HTML: <div>" + span.innerHTML + "</div>")
 }
-chemmacros()
+chemfig()
 "LIA: wait"
 </script>
 @end
