@@ -19,11 +19,11 @@ function chemfig() {
         alert("could not parse string correctly: \""+span.innerText+"\"");
         return;
     }
-    generateNodesInBranch(rootNode);
-    const nodes = sumUpNodes(rootNode)
+    window.generateNodesInBranch(rootNode);
+    const nodes = window.sumUpNodes(rootNode)
     let span = document.createElement("span");
     span.innerHTML = "";
-    draw(span, nodes[0], nodes[1]);
+    window.draw(span, nodes[0], nodes[1]);
     send.lia("HTML: <div>" + span.innerHTML + "</div>")
 }
 chemfig()

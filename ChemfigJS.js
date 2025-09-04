@@ -152,15 +152,15 @@ function generateNodesInBranch(branch, rx, ry, rangle) {
                 branch.bonds.push(b);
             } else if (b.type == "=") {
                 // double bond
-                startx = cx;
-                starty = cy;
+                let startx = cx;
+                let starty = cy;
 
                 // calculate new position for next atom
                 cx = cx + Math.round((Math.cos(cangle * Math.PI / 180) * bondLength));
                 cy = cy + Math.round((Math.sin(cangle * Math.PI / 180) * bondLength));
 
                 // first bond
-                b1 = JSON.parse(JSON.stringify(b));
+                let b1 = JSON.parse(JSON.stringify(b));
                 b1.startX = startx + Math.round((Math.cos((cangle + 90) * Math.PI / 180) * bondSep));
                 b1.startY = starty + Math.round((Math.sin((cangle + 90) * Math.PI / 180) * bondSep));
                 b1.endX = b1.startX + Math.round((Math.cos(cangle * Math.PI / 180) * bondLength));
@@ -168,7 +168,7 @@ function generateNodesInBranch(branch, rx, ry, rangle) {
                 branch.bonds.push(b1);
 
                 // second bond
-                b2 = JSON.parse(JSON.stringify(b));
+                let b2 = JSON.parse(JSON.stringify(b));
                 b2.startX = startx - Math.round((Math.cos((cangle + 90) * Math.PI / 180) * bondSep));
                 b2.startY = starty - Math.round((Math.sin((cangle + 90) * Math.PI / 180) * bondSep));
                 b2.endX = b2.startX + Math.round((Math.cos(cangle * Math.PI / 180) * bondLength));
@@ -176,15 +176,15 @@ function generateNodesInBranch(branch, rx, ry, rangle) {
                 branch.bonds.push(b2);
             } else if (b.type = "~") {
                 // triple bond
-                startx = cx;
-                starty = cy;
+                let startx = cx;
+                let starty = cy;
 
                 // calculate new position for next atom
                 cx = cx + Math.round((Math.cos(cangle * Math.PI / 180) * bondLength));
                 cy = cy + Math.round((Math.sin(cangle * Math.PI / 180) * bondLength));
 
                 // first bond
-                b1 = JSON.parse(JSON.stringify(b));
+                let b1 = JSON.parse(JSON.stringify(b));
                 b1.startX = startx + Math.round((Math.cos((cangle + 90) * Math.PI / 180) * bondSep * 2));
                 b1.startY = starty + Math.round((Math.sin((cangle + 90) * Math.PI / 180) * bondSep * 2));
                 b1.endX = b1.startX + Math.round((Math.cos(cangle * Math.PI / 180) * bondLength));
@@ -192,7 +192,7 @@ function generateNodesInBranch(branch, rx, ry, rangle) {
                 branch.bonds.push(b1);
 
                 // second bond
-                b2 = JSON.parse(JSON.stringify(b));
+                let b2 = JSON.parse(JSON.stringify(b));
                 b2.startX = startx - Math.round((Math.cos((cangle + 90) * Math.PI / 180) * bondSep * 2));
                 b2.startY = starty - Math.round((Math.sin((cangle + 90) * Math.PI / 180) * bondSep * 2));
                 b2.endX = b2.startX + Math.round((Math.cos(cangle * Math.PI / 180) * bondLength));
@@ -410,3 +410,6 @@ function draw(parent, textNodes, bonds) {
 }
 
 window.getBranch = getBranch;
+window.generateNodesInBranch = generateNodesInBranch;
+window.sumUpNodes = sumUpNodes;
+window.draw = draw;
